@@ -1,1 +1,23 @@
 @import "tailwindcss";
+@tailwind utilities;
+
+@theme {
+  --color-primary: #807BFF;
+  --color-secondary: #7570FF;
+  --color-red: #BC3156;
+  --color-green: #11907A;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p, button {
+  color: #fff;
+}
+
+@layer utilities {
+  .general-bg {
+    background-color: black;
+  }
+}
