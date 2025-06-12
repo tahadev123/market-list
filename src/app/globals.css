@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@tailwind utilities;
 
 @theme {
   --color-primary: #807BFF;
@@ -8,16 +7,15 @@
   --color-green: #11907A;
 }
 
+:root {
+  background-color: black;
+}
+
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, p, button {
   color: #fff;
-}
-
-@layer utilities {
-  .general-bg {
-    background-color: black;
-  }
 }

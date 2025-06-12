@@ -30,4 +30,33 @@ const circleVariants = {
   }),
 };
 
-export { containerFadeIn, textBlurIn, sectionFade, circleVariants };
+const containerVariants = {
+  initial: { y: 300 },
+  animate: {
+    y: 0,
+    transition: { type: "spring", stiffness: 95, damping: 20 },
+  },
+};
+
+const itemVariants = {
+  animate: {
+    y: 0,
+    transition: { type: "spring", stiffness: 500, damping: 30 },
+  },
+};
+
+const buttonVariants = {
+  initial: { opacity: 0, x: 10 },
+  animate: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: 10 },
+};
+
+export {
+  containerFadeIn,
+  textBlurIn,
+  sectionFade,
+  circleVariants,
+  containerVariants,
+  itemVariants,
+  buttonVariants,
+};
