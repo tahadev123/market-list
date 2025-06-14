@@ -14,28 +14,30 @@ function TitleAnimation({ hasAnimated }: Props) {
     <motion.div
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}
-      className="w-dvw flex justify-center z-10"
+      className="w-full max-w-screen-sm flex justify-center z-10 px-4"
     >
-      <div className="flex flex-wrap gap-x-2 mb-5 text-white text-[33px] font-bold leading-relaxed">
-        {words.map((word, i) => (
-          <motion.span
-            key={i}
-            initial={{ opacity: 0, y: 2, filter: "blur(4px)" }}
-            animate={
-              hasAnimated
-                ? { opacity: 1, y: 0, filter: "blur(0px)" }
-                : { opacity: 0 }
-            }
-            transition={{
-              duration: 0.5,
-              ease: "easeOut",
-              delay: delays[i],
-            }}
-            className={i === 0 ? "text-[var(--color-secondary)]" : ""}
-          >
-            {word}
-          </motion.span>
-        ))}
+      <div className="w-full flex justify-center z-10">
+        <div className="flex flex-wrap gap-x-1 mb-5 text-white font-bold leading-relaxed text-[20px] sm:text-[33px]">
+          {words.map((word, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0, y: 2, filter: "blur(4px)" }}
+              animate={
+                hasAnimated
+                  ? { opacity: 1, y: 0, filter: "blur(0px)" }
+                  : { opacity: 0 }
+              }
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: delays[i],
+              }}
+              className={i === 0 ? "text-[var(--color-secondary)]" : ""}
+            >
+              {word}
+            </motion.span>
+          ))}
+        </div>
       </div>
     </motion.div>
   );

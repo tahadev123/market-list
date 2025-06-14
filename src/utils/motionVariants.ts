@@ -51,6 +51,23 @@ const buttonVariants = {
   exit: { opacity: 0, x: 10 },
 };
 
+  const sliderVariants = {
+    enter: (dir: number) => ({
+      x: dir > 0 ? 300 : -300,
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.4 },
+    },
+    exit: (dir: number) => ({
+      x: dir > 0 ? -300 : 300,
+      opacity: 0,
+      transition: { duration: 0.4 },
+    }),
+  };
+
 export {
   containerFadeIn,
   textBlurIn,
@@ -59,4 +76,5 @@ export {
   containerVariants,
   itemVariants,
   buttonVariants,
+  sliderVariants
 };

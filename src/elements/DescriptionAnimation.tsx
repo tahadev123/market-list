@@ -17,7 +17,7 @@ function DescriptionAnimation({ hasAnimated }: Props) {
       variants={containerFadeIn}
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}
-      className="flex flex-wrap justify-center gap-x-1 w-[560px] text-sm leading-relaxed text-[#80818A] z-10"
+      className="flex flex-wrap justify-center gap-x-1 w-full max-w-[320px] sm:max-w-[560px] text-xs sm:text-sm leading-relaxed text-[#80818A] z-10"
     >
       {words.map((word, index) => (
         <motion.span key={index} variants={textBlurIn}>

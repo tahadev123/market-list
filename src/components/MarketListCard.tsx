@@ -42,7 +42,7 @@ function MarketListCard({
   ) : null;
 
   return (
-    <div className="w-[340px] h-[390px] bg-[#181921] rounded-2xl overflow-hidden border border-[#ccc]/10 py-5 relative">
+    <div className="w-full max-w-[350px] h-[390px] bg-[#181921] rounded-2xl overflow-hidden border border-[#ccc]/10 py-5 relative">
       <span className="flex items-center w-fit bg-[#0F1118] text-[var(--color-primary)] text-sm px-3 py-1 mb-5 ml-5 rounded-full">
         {icon}
         {title}

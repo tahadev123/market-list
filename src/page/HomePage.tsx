@@ -3,13 +3,10 @@ import TitleOfMarketList from "@/templates/TitleOfMarketList";
 
 function HomePage() {
   return (
-    <>
-      <div className="h-[600px]"></div>
-      <div className="flex items-center flex-wrap">
-        <TitleOfMarketList />
-        <MarketList />
-      </div>
-    </>
+    <div className="flex items-center justify-center flex-wrap">
+      <TitleOfMarketList />
+      <MarketList />
+    </div>
   );
 }
 

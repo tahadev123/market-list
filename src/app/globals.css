@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #807BFF;
-  --color-secondary: #7570FF;
-  --color-red: #BC3156;
-  --color-green: #11907A;
+  --color-primary: #807bff;
+  --color-secondary: #7570ff;
+  --color-red: #bc3156;
+  --color-green: #11907a;
 }
 
 :root {
@@ -16,6 +16,11 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, p, button {
+h1,
+h2,
+h3,
+h4,
+p,
+button {
   color: #fff;
 }

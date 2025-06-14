@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
@@ -18,19 +19,17 @@ function AnimateSection() {
   }, [inView]);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="px-4 sm:px-0">
       <motion.div
         variants={sectionFade}
         initial="hidden"
         animate={hasAnimated ? "visible" : "hidden"}
-        className="w-dvw h-auto flex flex-wrap items-center justify-center relative"
+        className="w-full max-w-[600px] mx-auto flex flex-wrap items-center justify-center relative"
       >
         <TitleAnimation hasAnimated={hasAnimated} />
         <DescriptionAnimation hasAnimated={hasAnimated} />
         <BlurredCircle
           delay={2}
-          width={360}
-          height={180}
           hasAnimated={hasAnimated}
         />
       </motion.div>

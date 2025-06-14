@@ -5,15 +5,11 @@ import { circleVariants } from "@/utils/motionVariants";
 
 interface BlurredCircleProps {
   delay?: number;
-  width?: number;
-  height?: number;
   hasAnimated: boolean;
 }
 
 function BlurredCircle({
   delay = 0,
-  width = 300,
-  height = 300,
   hasAnimated,
 }: BlurredCircleProps) {
   return (
@@ -22,12 +18,11 @@ function BlurredCircle({
       variants={circleVariants}
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}
-      className="absolute rounded-full bg-white/15 blur-[60px] z-0"
-      style={{
-        width,
-        height,
-        left: `calc(50% - ${width / 2}px)`,
-      }}
+      className={`
+        absolute rounded-full bg-white/15 blur-[45px] z-0
+        w-[170px] h-[80px] left-[calc(50%-90px)]
+        sm:w-[360px] sm:h-[180px] sm:left-[calc(50%-180px)]
+      `}
     />
   );
 }
