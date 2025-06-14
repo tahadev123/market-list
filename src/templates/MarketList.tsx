@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, PanInfo } from "framer-motion";
 import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
 
 import MarketListCard from "@/components/MarketListCard";
@@ -85,7 +85,7 @@ export default function MarketList(): JSX.Element {
     }
   };
 
-  const handleDragEnd = (_: unknown, info: { offset: { x: number } }) => {
+  const handleDragEnd = (_: unknown, info: PanInfo) => {
     if (info.offset.x < -100 && activeIndex < cards.length - 1) {
       setDirection(1);
       setActiveIndex((i) => i + 1);
