@@ -13,6 +13,7 @@ type Coin = {
 const COIN_LIMIT = 15;
 const CACHE_DURATION = 3000;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const cache: {
   data: any;
   lastFetch: number;

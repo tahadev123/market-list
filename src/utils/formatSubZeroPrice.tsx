@@ -1,10 +1,8 @@
-import React from "react";
-
 export function formatSubZeroPrice(price: number): JSX.Element {
   if (price < 0.0001) {
     const match = price.toExponential().match(/e-(\d+)/);
     const zeroCount = match ? parseInt(match[1]) - 1 : 0;
-    const digits = price.toFixed(zeroCount + 2).slice(2); // Remove "0."
+    const digits = price.toFixed(zeroCount + 2).slice(2);
     return (
       <>
         $0.0<sub>{zeroCount}</sub>
