@@ -19,7 +19,7 @@ function BlurredCircle({
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}
       className={`
-        absolute rounded-full bg-white/15 blur-[15px] sm:blur-[45px] z-0
+        absolute rounded-full bg-white/23 sm:bg-white/15 blur-[30px] sm:blur-[45px] z-0
         w-[170px] h-[80px] left-[calc(50%-90px)]
         sm:w-[360px] sm:h-[180px] sm:left-[calc(50%-180px)]
       `}
