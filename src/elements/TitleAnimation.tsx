@@ -17,7 +17,7 @@ function TitleAnimation({ hasAnimated }: Props) {
       className="w-full max-w-screen-sm flex justify-center z-10 px-4"
     >
       <div className="w-full flex justify-center z-10">
-        <div className="flex flex-wrap gap-x-1 mb-5 text-white font-bold leading-relaxed text-[20px] sm:text-[33px]">
+        <div className="flex flex-wrap gap-x-1 mb-5 text-white text-center font-bold leading-relaxed text-[20px] sm:text-[33px]">
           {words.map((word, i) => (
             <motion.span
               key={i}
