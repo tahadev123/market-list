@@ -29,7 +29,7 @@ const testSubZeroCoins: Coin[] = [
     symbol: "tsz1",
     image: "https://via.placeholder.com/30",
     current_price: 0.00000312,
-    price_change_percentage_24h: 1.2,
+    price_change_percentage_24h: 5,
   },
   {
     id: "subzero-2",
@@ -37,12 +37,12 @@ const testSubZeroCoins: Coin[] = [
     symbol: "tsz2",
     image: "https://via.placeholder.com/30",
     current_price: 0.000000586,
-    price_change_percentage_24h: -0.6,
+    price_change_percentage_24h: 2,
   },
 ];
 
 const applyFakePriceFluctuation = (price: number): number => {
-  const change = (Math.random() - 0.5) * 0.1;
+  const change = (Math.random() - 0.5) * 0.3;
   return +(price + price * change).toFixed(8);
 };
 
