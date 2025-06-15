@@ -29,7 +29,7 @@ const testSubZeroCoins: Coin[] = [
     symbol: "tsz1",
     image: "https://via.placeholder.com/30",
     current_price: 0.00000312,
-    price_change_percentage_24h: 5,
+    price_change_percentage_24h: 9,
   },
   {
     id: "subzero-2",
@@ -43,7 +43,7 @@ const testSubZeroCoins: Coin[] = [
 
 const applyFakePriceFluctuation = (price: number): number => {
   const change = (Math.random() - 0.5) * 0.3;
-  return +(price + price * change).toFixed(8);
+  return +(price + price * change).toFixed(6);
 };
 
 export async function GET() {
