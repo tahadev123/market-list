@@ -42,7 +42,7 @@ const testSubZeroCoins: Coin[] = [
 ];
 
 const applyFakePriceFluctuation = (price: number): number => {
-  const change = (Math.random() - 0.5) * 0.3;
+  const change = (Math.random() - 0.5) * 2;
   return +(price + price * change).toFixed(6);
 };
 
