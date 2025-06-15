@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { JSX, useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { AnimatePresence, motion, PanInfo } from "framer-motion";
 import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";

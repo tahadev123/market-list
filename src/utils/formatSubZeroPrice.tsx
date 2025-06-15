@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 export function formatSubZeroPrice(price: number): JSX.Element {
   if (price < 0.0001) {
     const match = price.toExponential().match(/e-(\d+)/);

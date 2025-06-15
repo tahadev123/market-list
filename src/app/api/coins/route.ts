@@ -13,8 +13,8 @@ type Coin = {
 const COIN_LIMIT = 15;
 const CACHE_DURATION = 3000;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const cache: {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any;
   lastFetch: number;
 } = {
@@ -95,6 +95,7 @@ export async function GET() {
     cache.lastFetch = now;
 
     return NextResponse.json(result);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     console.error("Error fetching coins:", err.message);
     return NextResponse.json(
