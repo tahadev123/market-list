@@ -14,7 +14,7 @@ function TitleOfMarketList() {
 
       <AnimateSection />
 
-      <button className="flex items-center bg-[var(--color-primary)] text-white text-sm py-2 px-9 sm:px-5 sm:py-2.5 rounded-[10px] mt-8 z-10 cursor-pointer">
+      <button className="flex items-center font-bold bg-[var(--color-primary)] text-white text-sm py-2 px-9 sm:px-5 sm:py-2.5 rounded-[10px] mt-8 z-10 cursor-pointer">
         View All coins
         <MdArrowRightAlt className="w-6 h-6 ml-1" />
       </button>
