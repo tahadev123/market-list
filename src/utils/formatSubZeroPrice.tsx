@@ -3,12 +3,16 @@ import { JSX } from "react";
 export function formatSubZeroPrice(price: number): JSX.Element {
   if (price < 0.0001) {
     const match = price.toExponential().match(/e-(\d+)/);
-    const zeroCount = match ? parseInt(match[1]) - 1 : 0;
-    const digits = price.toFixed(zeroCount + 2).slice(2);
+    const totalZeroCount = match ? parseInt(match[1]) : 0;
+    const shownZeroCount = 1;
+    const subZeroCount = totalZeroCount - shownZeroCount;
+
+    const digits = price.toFixed(subZeroCount + 2).slice(2);
+
     return (
       <>
-        $0.0<sub>{zeroCount}</sub>
-        {digits.slice(zeroCount)}
+        $0.0<sub>{subZeroCount}</sub>
+        {digits.slice(subZeroCount)}
       </>
     );
   }
